@@ -1,4 +1,16 @@
+@import "variables";
+
 @mixin heading($font-size) {
   margin-top: 0;
   font-size: $font-size;
+}
+
+@mixin button-basic {
+  border: 1px solid $primary-color;
+  color: $white;
+  background-color: transparent;
+  width: 90px;
+  height: 35px;
+  margin: 0 2px;
+  border-radius: 2rem;
 }

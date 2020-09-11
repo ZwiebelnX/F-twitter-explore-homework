@@ -1,3 +1,30 @@
 @import "variables";
 @import "mixins";
 @import "reboot";
+
+.header {
+  height: 80px;
+  border-bottom: 1px solid $gray-dark;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  margin-left: 30px;
+}
+
+.header-button-container {
+  margin-right: 30px;
+}
+
+.login-button {
+  @include button-basic;
+  color: $primary-color;
+}
+
+.register-button {
+  @include button-basic;
+  background-color: $primary-color;
+}
