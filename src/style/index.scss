@@ -20,11 +20,67 @@
 }
 
 .login-button {
-  @include button-basic;
   color: $primary-color;
 }
 
 .register-button {
-  @include button-basic;
+  background-color: $primary-color;
+}
+
+.login-form {
+  border: 1px solid $gray-dark;
+  border-radius: 0.3rem;
+  margin: auto;
+  margin-top: 4%;
+  padding: 2% 4%;
+  width: 30%;
+  display: flex;
+  flex-flow: column;
+
+  label {
+    @include form-label-basic;
+  }
+
+  input {
+    @include form-input-basic;
+    &:focus {
+      @include form-input-basic;
+      outline: none;
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+.login-form-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 10%;
+  color: $white;
+}
+
+.forget-password-link {
+  margin: 5% 0;
+  color: $primary-color;
+  text-decoration: none;
+  &:hover {
+    color: $primary-color;
+    text-decoration: underline;
+  }
+}
+
+.form-or-text {
+  text-align: center;
+}
+
+.login-form-submit-button {
+  color: $primary-color;
+}
+
+.login-form-register-button {
   background-color: $primary-color;
 }

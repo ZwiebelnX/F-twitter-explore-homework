@@ -1,3 +1,5 @@
+@import "mixins";
+
 body,
 html {
   margin: 0;
@@ -38,6 +40,7 @@ button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  @include button-basic;
 }
 
 h1 {

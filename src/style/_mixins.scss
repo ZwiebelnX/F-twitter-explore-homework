@@ -13,4 +13,25 @@
   height: 35px;
   margin: 0 2px;
   border-radius: 2rem;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+@mixin button-active-basic {
+}
+
+@mixin form-label-basic {
+  color: $gray;
+  margin: 5% 0;
+}
+
+@mixin form-input-basic {
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $gray-dark;
 }
