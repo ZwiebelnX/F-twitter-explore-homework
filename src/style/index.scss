@@ -40,11 +40,13 @@
   label {
     @include form-label-basic;
   }
-
+  // TODO feedback: 1：form-input-basic这个mixin只给input使用，所以没有必要抽取一个mixin. 抽取mixin的动机一般是一段css需要被公用。
   input {
     @include form-input-basic;
     &:focus {
+      //TODO feedback: &:focus嵌套的时候，非focus状态下的css代码还是在的，所以没有必要在include一遍form-input-basic
       @include form-input-basic;
+      //TODO feedback: 这个地方功能实现错误，focus的时候就是想要有outline,这里为什么把outline去掉？
       outline: none;
     }
   }
@@ -76,7 +78,8 @@
 .form-or-text {
   text-align: center;
 }
-
+// TODO feedback: 页面上的4个button本来是想让大家练习使用@extend和@mixin,去使用button-basic这个mixin
+//  但是你在_reboot.scss里面去使用了button-basic，这样是不对的哈，具体去看一下_reboot.scss里面的feedback
 .login-form-submit-button {
   color: $primary-color;
 }

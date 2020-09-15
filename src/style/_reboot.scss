@@ -40,6 +40,8 @@ button {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  //TODO feedback: _reboot.scss文件一般是项目上用来初始化整个项目的一些公共样式。
+  // 具体业务的css实现， 不应该依赖这个文件，不应该来修改这个文件
   @include button-basic;
 }
 
